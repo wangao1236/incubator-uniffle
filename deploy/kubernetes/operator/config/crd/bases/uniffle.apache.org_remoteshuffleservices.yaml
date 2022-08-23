@@ -989,12 +989,10 @@ spec:
                         description: "A special supplemental group that applies to
                           all containers in a pod. Some volume types allow the Kubelet
                           to change the ownership of that volume to be owned by the
-                          pod: 
- 1. The owning GID will be the FSGroup 2. The setgid
+                          pod: \n 1. The owning GID will be the FSGroup 2. The setgid
                           bit is set (new files created in the volume will be owned
                           by FSGroup) 3. The permission bits are OR'd with rw-rw----
-                          
- If unset, the Kubelet will not modify the ownership and
+                          \n If unset, the Kubelet will not modify the ownership and
                           permissions of any volume."
                         format: int64
                         type: integer
@@ -1070,8 +1068,7 @@ spec:
                             type: string
                           type:
                             description: "type indicates which kind of seccomp profile
-                              will be applied. Valid options are: 
- Localhost - a
+                              will be applied. Valid options are: \n Localhost - a
                               profile defined in a file on the node should be used.
                               RuntimeDefault - the container runtime default profile
                               should be used. Unconfined - no profile should be applied."
@@ -2020,8 +2017,7 @@ spec:
                                   type: string
                                 type:
                                   description: "type indicates which kind of seccomp
-                                    profile will be applied. Valid options are: 
-
+                                    profile will be applied. Valid options are: \n
                                     Localhost - a profile defined in a file on the
                                     node should be used. RuntimeDefault - the container
                                     runtime default profile should be used. Unconfined
@@ -2773,8 +2769,7 @@ spec:
                           description: "Ephemeral represents a volume that is handled
                             by a cluster storage driver. The volume's lifecycle is
                             tied to the pod that defines it - it will be created before
-                            the pod starts, and deleted when the pod is removed. 
-
+                            the pod starts, and deleted when the pod is removed. \n
                             Use this if: a) the volume is only needed while the pod
                             runs, b) features of normal volumes like restoring from
                             snapshot or capacity    tracking are needed, c) the storage
@@ -2782,18 +2777,14 @@ spec:
                             storage driver supports dynamic volume provisioning through
                             \   a PersistentVolumeClaim (see EphemeralVolumeSource
                             for more    information on the connection between this
-                            volume type    and PersistentVolumeClaim). 
- Use PersistentVolumeClaim
+                            volume type    and PersistentVolumeClaim). \n Use PersistentVolumeClaim
                             or one of the vendor-specific APIs for volumes that persist
-                            for longer than the lifecycle of an individual pod. 
-
+                            for longer than the lifecycle of an individual pod. \n
                             Use CSI for light-weight local ephemeral volumes if the
                             CSI driver is meant to be used that way - see the documentation
-                            of the driver for more information. 
- A pod can use both
+                            of the driver for more information. \n A pod can use both
                             types of ephemeral volumes and persistent volumes at the
-                            same time. 
- This is a beta feature and only available
+                            same time. \n This is a beta feature and only available
                             when the GenericEphemeralVolume feature gate is enabled."
                           properties:
                             volumeClaimTemplate:
@@ -2805,8 +2796,7 @@ spec:
                                 `<volume name>` is the name from the `PodSpec.Volumes`
                                 array entry. Pod validation will reject the pod if
                                 the concatenated name is not valid for a PVC (for
-                                example, too long). 
- An existing PVC with that name
+                                example, too long). \n An existing PVC with that name
                                 that is not owned by the pod will *not* be used for
                                 the pod to avoid using an unrelated volume by mistake.
                                 Starting the pod is then blocked until the unrelated
@@ -2815,11 +2805,9 @@ spec:
                                 an owner reference to the pod once the pod exists.
                                 Normally this should not be necessary, but it may
                                 be useful when manually reconstructing a broken cluster.
-                                
- This field is read-only and no changes will be
+                                \n This field is read-only and no changes will be
                                 made by Kubernetes to the PVC after it has been created.
-                                
- Required, must not be nil."
+                                \n Required, must not be nil."
                               properties:
                                 metadata:
                                   description: May contain labels and annotations
@@ -4831,12 +4819,10 @@ spec:
                         description: "A special supplemental group that applies to
                           all containers in a pod. Some volume types allow the Kubelet
                           to change the ownership of that volume to be owned by the
-                          pod: 
- 1. The owning GID will be the FSGroup 2. The setgid
+                          pod: \n 1. The owning GID will be the FSGroup 2. The setgid
                           bit is set (new files created in the volume will be owned
                           by FSGroup) 3. The permission bits are OR'd with rw-rw----
-                          
- If unset, the Kubelet will not modify the ownership and
+                          \n If unset, the Kubelet will not modify the ownership and
                           permissions of any volume."
                         format: int64
                         type: integer
@@ -4912,8 +4898,7 @@ spec:
                             type: string
                           type:
                             description: "type indicates which kind of seccomp profile
-                              will be applied. Valid options are: 
- Localhost - a
+                              will be applied. Valid options are: \n Localhost - a
                               profile defined in a file on the node should be used.
                               RuntimeDefault - the container runtime default profile
                               should be used. Unconfined - no profile should be applied."
@@ -5862,8 +5847,7 @@ spec:
                                   type: string
                                 type:
                                   description: "type indicates which kind of seccomp
-                                    profile will be applied. Valid options are: 
-
+                                    profile will be applied. Valid options are: \n
                                     Localhost - a profile defined in a file on the
                                     node should be used. RuntimeDefault - the container
                                     runtime default profile should be used. Unconfined
@@ -6638,8 +6622,7 @@ spec:
                           description: "Ephemeral represents a volume that is handled
                             by a cluster storage driver. The volume's lifecycle is
                             tied to the pod that defines it - it will be created before
-                            the pod starts, and deleted when the pod is removed. 
-
+                            the pod starts, and deleted when the pod is removed. \n
                             Use this if: a) the volume is only needed while the pod
                             runs, b) features of normal volumes like restoring from
                             snapshot or capacity    tracking are needed, c) the storage
@@ -6647,18 +6630,14 @@ spec:
                             storage driver supports dynamic volume provisioning through
                             \   a PersistentVolumeClaim (see EphemeralVolumeSource
                             for more    information on the connection between this
-                            volume type    and PersistentVolumeClaim). 
- Use PersistentVolumeClaim
+                            volume type    and PersistentVolumeClaim). \n Use PersistentVolumeClaim
                             or one of the vendor-specific APIs for volumes that persist
-                            for longer than the lifecycle of an individual pod. 
-
+                            for longer than the lifecycle of an individual pod. \n
                             Use CSI for light-weight local ephemeral volumes if the
                             CSI driver is meant to be used that way - see the documentation
-                            of the driver for more information. 
- A pod can use both
+                            of the driver for more information. \n A pod can use both
                             types of ephemeral volumes and persistent volumes at the
-                            same time. 
- This is a beta feature and only available
+                            same time. \n This is a beta feature and only available
                             when the GenericEphemeralVolume feature gate is enabled."
                           properties:
                             volumeClaimTemplate:
@@ -6670,8 +6649,7 @@ spec:
                                 `<volume name>` is the name from the `PodSpec.Volumes`
                                 array entry. Pod validation will reject the pod if
                                 the concatenated name is not valid for a PVC (for
-                                example, too long). 
- An existing PVC with that name
+                                example, too long). \n An existing PVC with that name
                                 that is not owned by the pod will *not* be used for
                                 the pod to avoid using an unrelated volume by mistake.
                                 Starting the pod is then blocked until the unrelated
@@ -6680,11 +6658,9 @@ spec:
                                 an owner reference to the pod once the pod exists.
                                 Normally this should not be necessary, but it may
                                 be useful when manually reconstructing a broken cluster.
-                                
- This field is read-only and no changes will be
+                                \n This field is read-only and no changes will be
                                 made by Kubernetes to the PVC after it has been created.
-                                
- Required, must not be nil."
+                                \n Required, must not be nil."
                               properties:
                                 metadata:
                                   description: May contain labels and annotations
