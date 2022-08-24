@@ -104,7 +104,7 @@ GOIMPORTS = $(shell pwd)/local/goimports
 .PHONY: goimports
 goimports: ## Download goimports locally if necessary.
 	$(call go-get-tool,$(GOIMPORTS),golang.org/x/tools/cmd/goimports@latest)
-	$(GOIMPORTS) -local github.com/apache/incubator-uniffle/deploy/kubernetes/operator -w .
+	$(GOIMPORTS) -local github.com/wangao1236/incubator-uniffle/deploy/kubernetes/operator -w .
 
 REVIVE = $(shell pwd)/local/revive
 .PHONY: revive

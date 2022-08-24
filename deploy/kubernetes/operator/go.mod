@@ -1,4 +1,4 @@
-module github.com/apache/incubator-uniffle
+module github.com/wangao1236/incubator-uniffle/deploy/kubernetes/operator
 
 go 1.16
 
