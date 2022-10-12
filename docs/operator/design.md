@@ -130,11 +130,8 @@ the workloads.
 For shuffle servers, only by changing the spec.shuffleServer.sync field to true, the controller will apply the
 corresponding updates to the workloads.
 
-If you want more examples, please read more in [examples](../../examples).
+If you want more examples, please read more in [examples](examples.md).
 
 ## State Transition
 
-![state transition](../images/rss-state-transition.png)
-
-
-
+![state transition](../asset/rss-crd-state-transition.png)

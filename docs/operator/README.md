@@ -15,17 +15,21 @@
   ~ limitations under the License.
   -->
 
-# Examples
+# Uniffle Operator
 
-We need to create configMap first which saves coordinators, shuffleServers and log4j's configuration(we can refer
-to [configuration](configuration.yaml)).
+The __[Uniffle Operator](https://github.com/apache/incubator-uniffle/tree/master/deploy/kubernetes/operator/)__ manages
+Apache Uniffle Cluster within Kubernetes.
 
-Coordinator is a stateless service, when upgrading, we can directly update the configuration and then update the image.
+The operator is currently in beta (`v1alpha1`), and while we do not anticipate changing the API in
+backwards-incompatible ways there is no such guarantee yet.
 
-Shuffle server is a stateful service, and the upgrade operation is more complicated, so we show examples of different
-upgrade modes.
+## Documentation
 
-- [Full Upgrade](full-upgrade)
-- [Full Restart](full-restart)
-- [Partition Upgrade](partition-upgrade)
-- [Specific Upgrade](specific-upgrade)
+Please visit the following pages for documentation on using and developing the Uniffle Operator:
+
+- [Installation](install.md): step-by-step instructions on how to get uniffle operator running on our cluster
+- [Design & Usage](design.md): overview design of operator and detail usage of CRD
+
+### Examples
+
+Example uses of each CRD have been [provided](examples.md).

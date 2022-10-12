@@ -37,7 +37,7 @@ cd /deploy/kubernetes/docker && sh build.sh --registry ${our-registry}
 ## Creating or Updating CRD
 
 We can refer
-to [crd yaml file](/deploy/kubernetes/operator/config/crd/bases/uniffle.apache.org_remoteshuffleservices.yaml).
+to [crd yaml file](../../deploy/kubernetes/operator/config/crd/bases/uniffle.apache.org_remoteshuffleservices.yaml).
 
 Run the following command:
 
@@ -47,7 +47,7 @@ kubectl apply -f ${crd-yaml-file}
 
 ## Setup or Update Uniffle Webhook
 
-We can refer to [webhook yaml file](/deploy/kubernetes/operator/config/manager/rss-webhook.yaml).
+We can refer to [webhook yaml file](../../deploy/kubernetes/operator/config/manager/rss-webhook.yaml).
 
 Run the following command:
 
@@ -57,7 +57,7 @@ kubectl apply -f ${webhook-yaml-file}
 
 ## Setup or Update Uniffle Controller
 
-We can refer to [controller yaml file](/deploy/kubernetes/operator/config/manager/rss-controller.yaml).
+We can refer to [controller yaml file](../../deploy/kubernetes/operator/config/manager/rss-controller.yaml).
 
 Run the following command:
 
@@ -67,9 +67,9 @@ kubectl apply -f ${controller-yaml-file}
 
 ## How To Use
 
-We can learn more details about usage of CRD from [uniffle operator design](design).
+We can learn more details about usage of CRD
+from [uniffle operator design](design.md).
 
 ## Examples
 
-Example uses of each CRD have been [provided](../examples).
-
+Example uses of CRD have been [provided](examples.md).
